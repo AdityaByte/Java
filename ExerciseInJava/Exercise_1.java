@@ -5,36 +5,52 @@
 
 import java.util.Scanner;
 
-public class Exercise1 {
+public class Exercise_1 {
     public static void main(String[] args) {
 
-        Scanner inp = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        
         System.out.println("Enter the marks of the student - ( for pcm students )");
+
+        // English marks
         System.out.print("English - ");
-        float english = inp.nextFloat();
+        float english = scanner.nextFloat();
+
+        // Hindi marks
         System.out.print("Hindi - ");
-        float hindi = inp.nextFloat();
+        float hindi = scanner.nextFloat();
+
+        // Mathematics marks
         System.out.print("Mathematics - ");
-        float maths = inp.nextFloat();
+        float maths = scanner.nextFloat();
+
+        // Physics marks
         System.out.print("Physics - ");
-        float physics = inp.nextFloat();
+        float physics = scanner.nextFloat();
+
+        // Chemistry marks
         System.out.print("Chemistry - ");
-        float chemistry = inp.nextFloat();
+        float chemistry = scanner.nextFloat();
 
         float sum = english + hindi + maths + physics + chemistry;
         float percentage = sum / 5;
 
         if (english > 100) {
             System.out.println(" please enter correct english marks");
-        }else if (hindi > 100) {
+        }
+        else if (hindi > 100) {
             System.out.println(" please enter correct hindi marks");
-        }else if (maths > 100){
+        }
+        else if (maths > 100){
             System.out.println(" please enter correct maths marks");
-        }else if (physics > 100) {
+        }
+        else if (physics > 100) {
             System.out.println(" please enter correct physics marks");
-        }else if (chemistry > 100){
+        }
+        else if (chemistry > 100){
             System.out.println(" please enter correct chemistry marks");
-        }else{
+        }
+        else{
             System.out.println("Your percentage is - " + percentage);
         }
 
@@ -42,8 +58,11 @@ public class Exercise1 {
 
         if (english>100 || hindi>100 || maths>100 || physics>100 || chemistry>100){
             System.out.println("Please enter correct data");
-        }else{
+        }
+        else{
             System.out.println("Your percentage is - " + percentage);
+
+            
         }
 
     }
