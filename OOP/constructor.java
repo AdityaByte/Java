@@ -22,6 +22,10 @@ public class Main{
         System.out.println(rahul.rollNum);
         System.out.println(rahul.name);
         System.out.println(rahul.marks);
+
+        // calling out the function by the .keyword
+
+        aditya.greeting();
     }
 }
 
@@ -30,8 +34,13 @@ class Student{
     int rollNum;
     String name;
     float marks;
+
+    void greeting(){
+        System.out.println("hey coders");
+    }
     
     // here is the constructor
+    // constructors dont have a return type the class is itself the return type
     Student (int rno, String name, float marks) {
         this.rollNum = rno;
         this.name = name;
