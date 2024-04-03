@@ -24,8 +24,12 @@ public class Main{
         System.out.println(rahul.marks);
 
         // calling out the function by the .keyword
-
         aditya.greeting();
+
+        Student random = new Student();
+        System.out.println(random.rollNum);
+        System.out.println(random.name);
+        System.out.println(random.marks);
     }
 }
 
@@ -38,7 +42,12 @@ class Student{
     void greeting(){
         System.out.println("hey coders");
     }
-    
+
+    Student(){
+        // this is how you call a constructor from an another constructor
+        // internally it is converting like Student(15,"abhi",99.9f); and calling this constructor cum function
+        this (15 , "abhi" , 99.9f);
+    }
     // here is the constructor
     // constructors dont have a return type the class is itself the return type
     Student (int rno, String name, float marks) {
