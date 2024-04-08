@@ -8,13 +8,12 @@
 7.Write a Java program to find whether an array is sorted or not.
  */
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 class Questions{
 
-    static void q1(){
     //1.Create an array of 5 floats and calculate their sum.
+    static void q1(){
         float[] arr = {45.7f, 67.8f, 63.4f, 99.2f, 100.0f};
         float num = 0;
         int i=0;
@@ -91,6 +90,23 @@ class Questions{
         Arrays.sort(arr);
         System.out.println("Minimum element of an array is = "+arr[0]);
         System.out.println("Maximum element of an array is = "+arr[arr.length-1]);
+
+        // another method
+        int maxElementFind = Integer.MIN_VALUE;
+        for(int e: arr){
+            if (e>maxElementFind);
+            maxElementFind = e;
+            }
+        System.out.println("maximum = " + maxElementFind);
+
+        int minElementFind = Integer.MAX_VALUE;
+        for (int e:arr){
+            if (e<minElementFind){
+                minElementFind = e;
+            }
+        }
+        System.out.println("minimum = " + minElementFind);
+
     }
 
     static void q7(){
