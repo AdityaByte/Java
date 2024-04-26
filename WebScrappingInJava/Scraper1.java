@@ -5,7 +5,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 public class SeleniumInJava {
     public static void main(String[] args) {
-        System.setProperty("webdriver.Edge.driver" , "F:\\program files\\selenium webdriver\\EdgeDriver\\edgedriver_win64\\msedgedriver.exe");
+        System.setProperty("webdriver.Edge.driver" , "Path where the driver is stored");
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.youtube.com");
         System.out.println(driver.getTitle());
