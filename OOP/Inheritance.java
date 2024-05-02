@@ -2,6 +2,8 @@
 Inheritance in java - In Java, one class can easily inherit the attributes 
 and methods from some other class. This mechanism of acquiring objects and
 properties from some other class is known as inheritance in Java.
+
+-> for inheriting a class from another class we use the '' extends '' keyword
 */
 
 class SuperClass{
