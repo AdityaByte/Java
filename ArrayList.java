@@ -2,7 +2,7 @@
 // The main basic differnce between the built in array or the arraylist is that we can resize the size of array in arraylist
 import java.util.ArrayList;
 
-class Test{
+class Main{
     public static void main(String[] args) {
         //Syntax
         ArrayList<String> arr = new ArrayList<String>();
