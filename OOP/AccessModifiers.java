@@ -1,5 +1,6 @@
 // access modifiers - It controls the access level
 
+// For class (access modifiers) -> public , default(we dont need to write default it is already default)
 class AccessModifiers{
 
     // Methods , attributes and constructors can have the following access modifiers - public, default, private, protected
