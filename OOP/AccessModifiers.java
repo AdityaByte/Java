@@ -1,5 +1,4 @@
-// access modifiers
-// ek java ki file me sirf ek public class hoti hai
+// access modifiers - It controls the access level
 
 class AccessModifiers{
 
@@ -25,6 +24,7 @@ class AccessModifiers{
     protected int AccessModifiers(char c){
         return 0;
     }
+    
 }
 
 class SubClass extends AccessModifiers{
@@ -32,6 +32,7 @@ class SubClass extends AccessModifiers{
     // like we can access the protected method here also by creating the object of subclass
 }
 
+// ek java ki file me sirf ek public class hoti hai
 public class Main {
     public static void main(String[] args) {
         AccessModifiers obj = new AccessModifiers();
