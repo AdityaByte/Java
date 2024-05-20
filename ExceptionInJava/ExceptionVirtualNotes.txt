@@ -1,0 +1,29 @@
+// Exceptions in java
+/*
+ * In java exception is an unwanted or unexpected event which occurs during the execution of a program
+ * Error --> An error is a serious problem that a reasonable application should not try to catch
+ * Exception --> An exception indicates a condition where a reasonable application might try to catch
+ * Exception heirarchy ->
+ *                                   Object
+ *                                     |
+ *                                  Throwable
+ *             ________________________|_______________________
+ *             |                                               |
+ *          Exception                                       Error
+ *      -> Checked Exceptions                           -> Virtual machine error
+ *      -> Unchecked Exceptions                         -> Assertion error
+ * 
+ *   Exception are also categorized as following
+ *  1> User defined exceptions
+ *  2> Built in exceptions 
+ *      a. Checked exceptions (Compile time exceptions)
+ *      b. Unchecked Exceptions (Run time exceptions)
+ * 
+ * Built In Exceptions - The exceptions which are predefind in the java library are the built in exeptions
+ * 
+ * 1) Checked Exceptions in java -
+ *      These are the exceptions which are checked at compile time , it has also the following types
+ *  a. fully checked excepetion - It is a checked exception where all its child classes are also checked
+ *          example - IOException and Interrepted Exception
+ *  b. partially checked exception - In this some of its child classes are unchecked , like an exception
+ */
