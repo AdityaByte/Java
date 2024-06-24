@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:c="http://www.springframework.org/schema/c"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+
+  <!-- 
+  <bean class="com.springcore.ci.Certi" name="cer">
+    <constructor-arg  value="Android using kotlin" />
+  </bean> 
+  -->
+
+  <!-- By using c schema -->
+
+  <bean class="com.springcore.ci.Certi" name="cer1" c:name="Machine learning using python"> </bean>
+
+
+  <bean class="com.springcore.ci.Person" name="person">
+    <!-- By using value as a tag -->
+    <constructor-arg>
+      <value>Aditya</value>
+    </constructor-arg>
+    <!-- By using value as an attribute -->
+    <constructor-arg value="10" type="int"/>
+    <constructor-arg ref="cer1" />
+    <constructor-arg>
+      <list>
+        <value>Betul</value>
+        <value>Bhopal</value>
+      </list>
+    </constructor-arg>
+  </bean>
+
+  <!-- creating Addition class bean -->
+ 
+  <bean class="com.springcore.ci.Addition" name="add">
+    <constructor-arg value="12" type="double" index="1" />
+    <constructor-arg value="24" type="double" index="0" />
+  </bean>
+
+</beans>

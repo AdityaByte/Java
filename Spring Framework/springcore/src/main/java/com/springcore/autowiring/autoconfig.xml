@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+
+  <!-- Declaring the dependency bean -->
+  <bean class="com.springcore.autowiring.Address" name="address">
+    <property name="street" value="los angeles steet" />
+    <property name="city" value="california" />
+  </bean>
+
+  <!-- This is the mannual method of injecting one bean object to another bean  -->
+  <!-- <bean class="com.springcore.autowiring.Emp" name="emp">
+    <property name="Address" ref="add" />
+  </bean> -->
+
+  <!-- This can also be done by the help of autowiring 
+    1> byName
+    2> byType
+    3> byConstructor
+  -->
+
+  <!-- 
+    1> byName mode
+    One thing we need to remember while using the byName autowiring is that
+  the name of the refernce variable inside the Emp method must be equal to the bean name 
+  which was declared in the configuration file -->
+  <!-- <bean class="com.springcore.autowiring.Emp" name="emp1" autowire="byName" /> -->
+
+  <!-- By Type-->
+  <!-- <bean class="com.springcore.autowiring.Emp" name="emp1" autowire="byType" /> -->
+
+  <!-- By constructor -->
+  <bean class="com.springcore.autowiring.Emp" name="emp1" autowire="constructor" />
+
+</beans>

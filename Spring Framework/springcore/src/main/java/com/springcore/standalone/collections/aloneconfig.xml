@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/util
+  http://www.springframework.org/schema/util/spring-util.xsd">
+
+  <!-- If we want to create a standalone collections we have to add the
+  namespace of the util schema in the configuartion file -->
+  <util:list list-class="java.util.LinkedList" id="friendId">
+    <value>Aditya</value>
+    <value>sourabh</value>
+    <value>sangam</value>
+    <value>arjun</value>
+  </util:list>
+
+  <!-- if we want to declare a standalone set  -->
+  <util:set set-class="java.util.HashSet" id="addressId" >
+    <value>betul</value>
+    <value>bhopal</value>
+    <value>indore</value>
+    <value>ujjain</value>
+  </util:set>
+
+  <!-- if we want to declare a standalone map -->
+  <util:map map-class="java.util.TreeMap" id="coursesId">
+    <entry key="Java" value="2 months"/>
+    <entry key="python" value="4 months" />
+    <entry key="android development" value="3months"/>
+  </util:map>
+
+  <!-- if we want to declare a standalone properties
+  Properties are just key value pair
+  we dont need to specify class which declaring the standalone property because it is a class
+  -->
+
+  <util:properties id="credentials">
+    <prop key="username">admin</prop>
+    <prop key="password">aditya</prop>
+  </util:properties>
+
+  <bean class="com.springcore.standalone.collections.Person" name="person1">
+    <property name="friends">
+      <ref bean="friendId" />
+    </property>
+    <property name="address" ref="addressId" />
+    <property name="courses" ref="coursesId" />
+    <property name="properties" ref="credentials" />
+  </bean>
+
+</beans>
