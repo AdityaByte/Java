@@ -1,0 +1,2 @@
+// It is the folder related to the database connectivity
+// In the current database we are creating an another table
