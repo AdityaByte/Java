@@ -1,0 +1,30 @@
+Here we are discussing some important sql queries that might be very usefull to you
+
+> Some basic queries of mysql
+query = use databaseName;
+query = show databases;
+query = show tables;
+query = desc tableName;
+
+> For creating a database in mysql 
+query = create databse databaseName;
+> For deleting a databse in mysql
+query = drop database databaseName;
+> For creating a table in database
+query = create table tableName(columnName , columnName2 , columnName3);
+Note - columnName int(20) primary key auto_increment , columnName varchar(100) 
+> For deleting a table in database
+query = drop table tableName;
+> For deleting a table inside a table in a database
+query = truncate table tableName;
+> For inserting data in column in table inside a database
+query = insert into tableName(columnName , columnName) values(value1 , value2 and so on);
+> For deleting a data in table by condition
+query = delete from tableName where id=1 or name="aditya";
+> For fetching all data of a table
+query = select * from tableName;
+> Selecting a particular row data
+query = select * from tableName where id=3 or name="something";
+query = select studentName from table1 where rollNo = 23; // this will dump the studentName;
+> Update query in mysql
+query = update tableName set columnName="" where columnName="";
