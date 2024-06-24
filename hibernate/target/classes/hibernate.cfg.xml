@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+	"-//Hibernate/Hibernate Configuration DTD 2.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-2.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hibernatedb</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">aditya</property>
+        <!-- This is for the query langauge because the query lang differs for different databases
+        so we have to specify that which database we are currently using -->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <!-- This is for automatically creating the table  -->
+        <property name="hbm2ddl.auto">update</property>
+        <!-- This is for showing the sql queries which was created by the hibernate -->
+        <property name="show_sql">true</property>
+        <!-- For formatting the sql queries -->
+        <property name="format_sql">true</property>
+        <!-- This is for specify the location of the entity class for mapping -->
+        <mapping class="com.hibernate.Student" />
+        <!-- Every time you make a new entity you have to decalre that 
+        entity class here -->
+        <mapping class="com.hibernate.Address" />
+        <!-- for making second level cache -->
+    </session-factory>
+</hibernate-configuration>
