@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      database: JournalApp
+      uri: mongodb+srv://aditya:aditya@mongoclustor.glkb7.mongodb.net/?retryWrites=true&w=majority&appName=MongoClustor
+      auto-index-creation: true
+
+  main:
+    allow-circular-references: true
+
+server:
+  port: 8081
+  servlet:
+    context-path: /JournalApp

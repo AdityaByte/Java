@@ -1,0 +1,41 @@
+spring:
+  data:
+    mongodb:
+      database: JournalApp
+      uri: mongodb+srv://aditya:aditya@mongoclustor.glkb7.mongodb.net/?retryWrites=true&w=majority&appName=MongoClustor
+      auto-index-creation: true
+
+  main:
+    allow-circular-references: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /JournalApp
+
+# Severity level - lowest to highest
+#trace - lowest
+#debug - low
+#info - moderate
+#warn - high
+#error - highest
+
+logging:
+  level:
+    com:
+      journalapp: ERROR
+
+# if we want to modify the internal config and do some things at root level
+
+#logging:
+#  level:
+#    root: ERROR
+
+# If we want to off the logs of a particular package or class we can follow the below method-
+
+#logging:
+#  level:
+#    com:
+#      journalapp:
+#        service:
+#          UserService: OFF

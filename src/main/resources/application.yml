@@ -1,0 +1,20 @@
+# Rather thann doing this things time by time in dev and in prod we have to configure this property to command line argument.
+spring:
+  profiles:
+    active: dev
+
+
+#spring:
+#  data:
+#    mongodb:
+#      database: JournalApp
+#      uri: mongodb+srv://aditya:aditya@mongoclustor.glkb7.mongodb.net/?retryWrites=true&w=majority&appName=MongoClustor
+#      auto-index-creation: true
+#
+#  main:
+#    allow-circular-references: true
+#
+#server:
+#  port: 8080
+#  servlet:
+#    context-path: /JournalApp
